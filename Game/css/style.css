@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background: url(https://im1-tub-ru.yandex.net/i?id=78f48db1cf59cbe42e5f2ae1594bdce4&n=33&h=215&w=344);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.navbar-default {
+    background-color: #11293d;
+    border-color: #E7E7E7;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.container-fluid {
+    padding: 30px 50px;
+}
+
+.container {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 90px;
+    background-color: #ffffff;
+
+
+}
+
+.main {
+    padding-bottom: 50px;
+}
+
+#mainpage {
+    background: url(http://webmasterpro.ucoz.com/shapky/shapky_igr/shapka1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black;
+}
+
+.news {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.news .img {
+    text-align: center;
+    max-width: 40%;
+    height: auto;
+}
+
+.comments {
+    padding-top: 20px;
+    background-color: rgba(220, 207, 222, 0.76);
+}
+
+.comments img {
+    max-width: 40%;
+    height: auto;
+    background-color: #e8e8e8;
+}
+
+.comments .author {
+    font-size: medium;
+    color: #000000;
+}
+
+.comments .date {
+    font-size: smaller;
+}
+
+.under-footer {
+    background-color: #11293d;
+    color: #ffffff;
+}
+
+.heading {
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.search {
+    padding-bottom: 50px;
+}
+
+
+.table thead {
+    background-color: rgba(31, 9, 232, 0.24);
+}
+
+.table tbody {
+    text-align: center;
+}
+
+.button {
+    padding-top: 20px;
+}
+
+nav {
+    font-size: large;
+}
+
+.message-part .date {
+    background-color: rgba(31, 9, 232, 0.24);
+    text-align: right;
+    text-size: medium;
+}
+
+.message-part {
+    padding-bottom: 40px;
+}
+
+.video-game {
+    padding-top: 40px;
+}
+
+.video {
+    padding-bottom: 50px;
+}
+
+.date {
+    padding-top: 20px;
+}
+
