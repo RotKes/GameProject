@@ -5,6 +5,21 @@
     <title>Game</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script type="application/javascript" src="js/jquery-1.5.min.js"></script>
+
+    <script type="application/javascript" src="js/jquery.jcarousel.js"></script>
+
+    <script type="application/javascript">
+        jQuery(document).ready(function() {
+            // Initialise the first and second carousel by class selector.
+            // Note that they use both the same configuration options (none in this case).
+            jQuery('.d-carousel .carousel').jcarousel({
+                scroll: 1
+            });
+        });
+    </script>
+
 </head>
 <body>
 <div class="container">
@@ -32,6 +47,7 @@
             </div>
         </nav>
     </div>
+
     <div class="main">
         <div class="jumbotron" id="mainpage">
             <h1>Добро пожаловать!</h1>
@@ -39,55 +55,103 @@
         </div>
 
         <div class="news">
-            <div class="row">
-                <div class="heading col-md-offset-2">
-                    <h1>Новости</h1>
-                </div>
-                <div class="col-lg-4">
-                    <p class="img"><img class="img-responsive img-rounded"
-                                        src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"></p>
-                    <h2>Название новости</h2>
-                    <p>Краткая информация о новости</p>
-                    <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <p class="img"><img class="img-responsive img-rounded"
-                                        src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"></p>
-                    <h2>Название новости</h2>
-                    <p>Краткая информация о новости</p>
-                    <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <p class="img"><img class="img-responsive img-rounded"
-                                        src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"></p>
-                    <h2>Название новости</h2>
-                    <p>Краткая информация о новости</p>
-                    <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+            <div class="heading col-md-offset-2">
+                <h1>Новости</h1>
+            </div>
+
+            <div class="news">
+                <div class="d-carousel col-lg-11 col-md-offset-1">
+                    <ul class="carousel">
+                        <li><a href="#"><img class="img-responsive img-rounded"
+                                             src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"/></a>
+                            <h4>1 Название новости</h4>
+                            <p>Suspendisse potenti. Nibh miry, ultricies ac molestie sit ameter vestibulum eget nunc.
+                                Vivamus vitae aliquam odio. Morbi sit amet odio tincidunt. Maecenas est felis, semper in
+                                accumsan. </p>
+                            <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+                        </li>
+                        <li><a href="#"><img class="img-responsive img-rounded"
+                                             src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"/></a>
+                            <h4>2 Название новости</h4>
+                            <p>Suspendisse potenti. Nibh miry, ultricies ac molestie sit ameter vestibulum eget nunc.
+                                Vivamus vitae aliquam odio. Morbi sit amet odio tincidunt. Maecenas est felis, semper in
+                                accumsan. </p>
+                            <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+                        </li>
+                        <li><a href="#"><img class="img-responsive img-rounded"
+                                             src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"/></a>
+                            <h4>3 Название новости</h4>
+                            <p>Suspendisse potenti. Nibh miry, ultricies ac molestie sit ameter vestibulum eget nunc.
+                                Vivamus vitae aliquam odio. Morbi sit amet odio tincidunt. Maecenas est felis, semper in
+                                accumsan. </p>
+                            <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+                        </li>
+                        <li><a href="#"><img class="img-responsive img-rounded"
+                                             src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"/></a>
+                            <h4>4 Название новости</h4>
+                            <p>Suspendisse potenti. Nibh miry, ultricies ac molestie sit ameter vestibulum eget nunc.
+                                Vivamus vitae aliquam odio. Morbi sit amet odio tincidunt. Maecenas est felis, semper in
+                                accumsan. </p>
+                            <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+                        </li>
+                        <li><a href="#"><img class="img-responsive img-rounded"
+                                             src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"/></a>
+                            <h4>5 Название новости</h4>
+                            <p>Suspendisse potenti. Nibh miry, ultricies ac molestie sit ameter vestibulum eget nunc.
+                                Vivamus vitae aliquam odio. Morbi sit amet odio tincidunt. Maecenas est felis, semper in
+                                accumsan. </p>
+                            <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+                        </li>
+                        <li><a href="#"><img class="img-responsive img-rounded"
+                                             src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"/></a>
+                            <h4>6 Название новости</h4>
+                            <p>Suspendisse potenti. Nibh miry, ultricies ac molestie sit ameter vestibulum eget nunc.
+                                Vivamus vitae aliquam odio. Morbi sit amet odio tincidunt. Maecenas est felis, semper in
+                                accumsan. </p>
+                            <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+                        </li>
+                        <li><a href="#"><img class="img-responsive img-rounded"
+                                             src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"/></a>
+                            <h4>7 Название новости</h4>
+                            <p>Suspendisse potenti. Nibh miry, ultricies ac molestie sit ameter vestibulum eget nunc.
+                                Vivamus vitae aliquam odio. Morbi sit amet odio tincidunt. Maecenas est felis, semper in
+                                accumsan. </p>
+                            <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+                        </li>
+                        <li><a href="#"><img class="img-responsive img-rounded"
+                                             src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"/></a>
+                            <h4>8 Название новости</h4>
+                            <p>Suspendisse potenti. Nibh miry, ultricies ac molestie sit ameter vestibulum eget nunc.
+                                Vivamus vitae aliquam odio. Morbi sit amet odio tincidunt. Maecenas est felis, semper in
+                                accumsan. </p>
+                            <p><a class="btn btn-default" href="#" role="button">Подробнее &raquo;</a></p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <div class="footer">
-        <div class="comments col-lg-12">
-            <h3 class="title-comments">Комментарии (6)</h3>
-            <ul class="media-list">
-                <li class="media">
-                    <div class="media-heading col-lg-2">
-                        <div class="author">Дима</div>
-                        <div class="metadata">
-                            <span class="date">16 ноября 2015, 13:43</span>
-                        </div>
-                    </div>
-                    <div class="media-text text-justify col-lg-10">Текст комментария</div>
-                </li>
-            </ul>
-        </div>
-        <div class="under-footer">
-            <p class="text-muted">Place sticky footer content here.</p>
-        </div>
-    </div>
 </div>
+
+
+</div>
+<footer>
+    <div class="comments">
+        <h3 class="title-comments">Комментарии (6)</h3>
+        <ul class="media-list">
+            <li class="media">
+                <div class="media-heading col-lg-2">
+                    <div class="author">Дима</div>
+                    <div class="metadata">
+                        <span class="date">16 ноября 2015, 13:43</span>
+                    </div>
+                </div>
+                <div class="media-text text-justify col-lg-10">Текст комментария</div>
+            </li>
+        </ul>
+    </div>
+    <p class="text-muted">Place sticky footer content here.</p>
+</footer>
+
 </body>
 </html>
