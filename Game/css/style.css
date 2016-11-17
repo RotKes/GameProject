@@ -118,6 +118,12 @@ nav {
     padding-bottom: 50px;
 }
 
+.video-description {
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
 .date {
     padding-top: 20px;
 }
