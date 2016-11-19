@@ -2,9 +2,9 @@ package ru.kpfu.itis.group.kadyrov.filter;
 
 import ru.kpfu.itis.group.kadyrov.models.User;
 import ru.kpfu.itis.group.kadyrov.services.TokenService;
-import ru.kpfu.itis.group.kadyrov.services.TokenServiceImpl;
+import ru.kpfu.itis.group.kadyrov.services.implementations.TokenServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.UserService;
-import ru.kpfu.itis.group.kadyrov.services.UserServiceImpl;
+import ru.kpfu.itis.group.kadyrov.services.implementations.UserServiceImpl;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

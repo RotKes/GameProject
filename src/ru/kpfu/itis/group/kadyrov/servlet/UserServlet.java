@@ -34,6 +34,6 @@ public class UserServlet extends HttpServlet {
         UserService userService = new UserServiceImpl();
         root.put("userService", userService);
 
-        //Helper.render(request, response, "user.ftl", root);
+        Helper.render(request, response, "user.ftl", root);
     }
 }

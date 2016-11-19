@@ -25,6 +25,12 @@ public class Video {
         this.date = date;
     }
 
+    public Video(int game_id, String videoLink, String title) {
+        this.game_id = game_id;
+        this.videoLink = videoLink;
+        this.title = title;
+    }
+
     public String getVideoLink() {
         return videoLink;
     }

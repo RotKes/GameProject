@@ -12,9 +12,9 @@ import java.util.LinkedList;
 public interface GameService {
     void addGame(Game game) throws SQLException;
     Game findGame(String name);
-    Game findGameById(String id);
+    Game findGameById(int id);
     JSONArray getNamesOfSpecialGames(String q);
     LinkedList<Game> getAllGames();
-    void deleteGame(String id);
+    void deleteGame(int id);
     void changeRatingOfGame(int game_id);
 }

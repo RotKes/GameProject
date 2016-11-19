@@ -20,6 +20,12 @@ public class News {
         this.date = date;
     }
 
+    public News(int game_id, String title, String text) {
+        this.game_id = game_id;
+        this.title = title;
+        this.text = text;
+    }
+
     public int getId() {
         return id;
     }

@@ -32,9 +32,6 @@ public class AdminServlet extends HttpServlet {
         UserService userService = new UserServiceImpl();
         root.put("userService", userService);
 
-        FilesCommentService filesCommentService = new FilesCommentServiceImpl();
-        root.put("filesCommentService",filesCommentService);
-
         NewsCommentService newsCommentService = new NewsCommentServiceImpl();
         root.put("newsCommentService", newsCommentService);
 

@@ -20,13 +20,6 @@ public class CommentNews {
         this.date = date;
     }
 
-    public CommentNews(int id, int post_id, int creator_id, String text) {
-        this.id = id;
-        this.post_id = post_id;
-        this.creator_id = creator_id;
-        this.text = text;
-    }
-
     public CommentNews(int post_id, int creator_id, String text) {
         this.post_id = post_id;
         this.creator_id = creator_id;

@@ -18,6 +18,11 @@ public class Topic {
         this.date = date;
     }
 
+    public Topic(int creator_id, String title) {
+        this.creator_id = creator_id;
+        this.title = title;
+    }
+
     public int getId() {
         return id;
     }

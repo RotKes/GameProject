@@ -1,14 +1,9 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
 import ru.kpfu.itis.group.kadyrov.Helper;
-import ru.kpfu.itis.group.kadyrov.ServiceFactory;
-import ru.kpfu.itis.group.kadyrov.models.User;
-import ru.kpfu.itis.group.kadyrov.services.TokenService;
-import ru.kpfu.itis.group.kadyrov.services.implementations.TokenServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.UserService;
 import ru.kpfu.itis.group.kadyrov.services.implementations.UserServiceImpl;
 import ru.kpfu.itis.group.kadyrov.utils.SystemMessage;
-import ru.kpfu.itis.group.kadyrov.utils.Token;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -38,7 +33,6 @@ public class RegistrationServlet extends HttpServlet {
         message = userService.addUser(login, email, password, 1);
 
         root.put(message.getName(),message.getMessage());
-        System.out.println(message.getName());
         if(message.getName().equals("user_registration")) {
             session = request.getSession();
             session.setAttribute(message.getName(),message.getMessage());

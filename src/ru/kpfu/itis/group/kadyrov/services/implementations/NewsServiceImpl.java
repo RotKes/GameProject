@@ -1,7 +1,9 @@
 package ru.kpfu.itis.group.kadyrov.services.implementations;
 
+import org.json.JSONArray;
 import ru.kpfu.itis.group.kadyrov.dao.NewsDao;
 import ru.kpfu.itis.group.kadyrov.dao.implementations.NewsDaoImpl;
+import ru.kpfu.itis.group.kadyrov.models.Game;
 import ru.kpfu.itis.group.kadyrov.models.News;
 import ru.kpfu.itis.group.kadyrov.services.NewsService;
 import ru.kpfu.itis.group.kadyrov.singleton.ConnectionSingleton;
@@ -60,6 +62,49 @@ public class NewsServiceImpl implements NewsService {
                     linkedList.addFirst(news);
                 }
                 return linkedList;
+            } catch (SQLException sql) {
+                sql.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Game getGameNewsIsAbout(int id) {
+        if (ConnectionSingleton.getInstance().getConnection()!= null) {
+            String request = "SELECT games.* FROM games, news WHERE news.id = ? AND news.game_id = games.id";
+            try {
+                PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
+                statement.setInt(1, id);
+                ResultSet rs = statement.executeQuery();
+                while (rs.next()) {
+                    return new Game(rs.getInt("id"),
+                            rs.getString("name"),
+                            rs.getString("date"),
+                            rs.getString("description"),
+                            rs.getString("image"),
+                            rs.getInt("rate"));
+                }
+            } catch (SQLException sql) {
+                sql.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public JSONArray getSpecialTitles(String q) {
+        if (ConnectionSingleton.getInstance().getConnection()!= null && !q.equals("")) {
+            String request = "SELECT \"title\" FROM news WHERE title LIKE ? ORDER BY \"title\"";
+            try {
+                PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
+                statement.setString(1,"%" + q + "%");
+                ResultSet rs = statement.executeQuery();
+                JSONArray ja = new JSONArray();
+                while (rs.next()) {
+                    ja.put(rs.getString("title"));
+                }
+                return ja;
             } catch (SQLException sql) {
                 sql.printStackTrace();
             }

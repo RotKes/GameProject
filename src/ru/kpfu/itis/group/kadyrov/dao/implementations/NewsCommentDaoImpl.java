@@ -17,7 +17,7 @@ public class NewsCommentDaoImpl implements NewsCommentDao {
     @Override
     public void addNewsComment(CommentNews comment) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && comment != null) {
-            String request = "INSERT INTO comment_news (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,now())";
+            String request = "INSERT INTO comment_news (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,comment.getPost_id());
@@ -55,7 +55,7 @@ public class NewsCommentDaoImpl implements NewsCommentDao {
     @Override
     public LinkedList<CommentNews> getAllNewsComments() {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT * FROM comment_news ORDER BY \"date\"";
+            String request = "SELECT * FROM comment_news ORDER BY \"date\" DESC";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 ResultSet rs = statement.executeQuery();
@@ -85,7 +85,7 @@ public class NewsCommentDaoImpl implements NewsCommentDao {
     @Override
     public LinkedList<CommentNews> getAllNewsCommentsOfPostById(int post_id) {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT * FROM comment_news WHERE \"post_id\" = ? ORDER BY \"date\"";
+            String request = "SELECT * FROM comment_news WHERE \"post_id\" = ? ORDER BY \"date\" DESC";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,post_id);

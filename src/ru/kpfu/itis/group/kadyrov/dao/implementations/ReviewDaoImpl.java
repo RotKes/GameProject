@@ -16,15 +16,14 @@ public class ReviewDaoImpl implements ReviewDao {
     @Override
     public void addReview(Review review) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && review != null) {
-            String request = "INSERT INTO reviews (\"id\",\"game_id\",\"creator_id\",\"title\",\"text\",\"rate\",\"date\") VALUES (?,?,?,?,?,?,now())";
+            String request = "INSERT INTO reviews (\"game_id\",\"creator_id\",\"title\",\"text\",\"rate\",\"date\") VALUES (?,?,?,?,?,DATE_TRUNC('second', NOW()))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setInt(1,review.getId());
-                statement.setInt(2,review.getGame_id());
-                statement.setInt(3,review.getCreator_id());
-                statement.setString(4,review.getTitle());
-                statement.setString(5,review.getText());
-                statement.setInt(6,review.getRate());
+                statement.setInt(1,review.getGame_id());
+                statement.setInt(2,review.getCreator_id());
+                statement.setString(3,review.getTitle());
+                statement.setString(4,review.getText());
+                statement.setInt(5,review.getRate());
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();

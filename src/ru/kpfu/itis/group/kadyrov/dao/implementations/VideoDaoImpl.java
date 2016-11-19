@@ -16,13 +16,12 @@ public class VideoDaoImpl implements VideoDao {
     @Override
     public void addVideo(Video video) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && video != null) {
-            String request = "INSERT INTO videos (\"id\",\"game_id\",\"video_link\",\"title\",\"date\") VALUES (?,?,?,?,now())";
+            String request = "INSERT INTO videos (\"game_id\",\"video_link\",\"title\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setInt(1,video.getId());
-                statement.setInt(2,video.getGame_id());
-                statement.setString(3,video.getVideoLink());
-                statement.setString(4,video.getTitle());
+                statement.setInt(1,video.getGame_id());
+                statement.setString(2,video.getVideoLink());
+                statement.setString(3,video.getTitle());
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();

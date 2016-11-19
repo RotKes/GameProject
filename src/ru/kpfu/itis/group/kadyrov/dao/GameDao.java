@@ -11,7 +11,7 @@ import java.util.LinkedList;
 public interface GameDao {
     void addGame(Game game) throws SQLException;
     Game findGame(String name);
-    Game findGameById(String id);
+    Game findGameById(int id);
     LinkedList<Game> getAllGames();
-    void deleteGame(String id);
+    void deleteGame(int id);
 }

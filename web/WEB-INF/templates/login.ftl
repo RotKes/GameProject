@@ -13,6 +13,13 @@
                     ${if_just_registered}
                 </#if>
             </div>
+            <div style="color: red; font-size: medium; text-align: center">
+                <#if incorrect_password??>
+                    ${incorrect_password}
+                <#elseif user_not_find??>
+                ${user_not_find}
+                </#if>
+            </div>
             <div class="form-group col-sm-10 col-md-offset-1">
                 <label for="InputLogin">Логин</label>
                 <input type="text" class="form-control" name="login" id="InputLogin" placeholder="Введите логин"
@@ -31,13 +38,6 @@
             </div>
             <div class="col-sm-offset-7 col-sm-5">
                 <button type="submit" class="btn btn-default">Войти</button>
-            </div>
-            <div>
-                <#if incorrect_password??>
-                    ${incorrect_password}
-                <#elseif user_not_find??>
-                    ${user_not_find}
-                </#if>
             </div>
         </form>
     </div>

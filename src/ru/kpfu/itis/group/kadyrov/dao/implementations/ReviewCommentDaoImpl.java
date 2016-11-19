@@ -16,7 +16,7 @@ public class ReviewCommentDaoImpl implements ReviewCommentDao {
     @Override
     public void addReviewComment(CommentReview comment) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && comment != null) {
-            String request = "INSERT INTO comment_reviews (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,now())";
+            String request = "INSERT INTO comment_reviews (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,comment.getPost_id());
@@ -54,7 +54,7 @@ public class ReviewCommentDaoImpl implements ReviewCommentDao {
     @Override
     public LinkedList<CommentReview> getAllReviewComments() {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT * FROM comment_reviews ORDER BY \"date\"";
+            String request = "SELECT * FROM comment_reviews ORDER BY \"date\" DESC";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 ResultSet rs = statement.executeQuery();
@@ -84,9 +84,10 @@ public class ReviewCommentDaoImpl implements ReviewCommentDao {
     @Override
     public LinkedList<CommentReview> getAllReviewCommentsOfPostById(int post_id) {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT * FROM comment_reviews WHERE \"post_id\" = ? ORDER BY \"date\"";
+            String request = "SELECT * FROM comment_reviews WHERE \"post_id\" = ? ORDER BY \"date\" DESC";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
+                statement.setInt(1,post_id);
                 ResultSet rs = statement.executeQuery();
                 LinkedList<CommentReview> linkedList = new LinkedList<CommentReview>();
                 CommentReview comment;

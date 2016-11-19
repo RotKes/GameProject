@@ -1,6 +1,7 @@
 package ru.kpfu.itis.group.kadyrov.services;
 
 import ru.kpfu.itis.group.kadyrov.models.CommentReview;
+import ru.kpfu.itis.group.kadyrov.models.User;
 
 import java.sql.SQLException;
 import java.util.LinkedList;
@@ -14,4 +15,6 @@ public interface ReviewCommentService {
     LinkedList<CommentReview> getAllReviewComments();
     LinkedList<CommentReview> getAllReviewCommentsOfPostById(int post_id);
     void deleteReviewComment(int id);
+    int getNumberOfCommentsInThisReview(int id);
+    User getCreatorOfMessage(int id);
 }

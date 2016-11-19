@@ -1,20 +1,20 @@
 <#ftl encoding="utf-8"/>
 <#macro head>
-<title>Videos</title>
+<title>News</title>
 </#macro>
 <#macro page>
 <div class="heading col-md-offset-2 col-lg-6">
-    <h1>Видео:</h1>
+    <h1>Новости:</h1>
 </div>
 <div class="search col-lg-8 col-md-offset-1">
     <h4 class="col-lg-2">Найти:</h4>
-    <p><input id="vs" type="text" oninput="f()" class="form-control col-lg-8" style="width: 400px" placeholder="Search..."></p>
+    <p><input id="ns" type="text" oninput="f()" class="form-control col-lg-8" style="width: 400px" placeholder="Search..."></p>
     <script type="application/javascript">
         var f = function() {
             $.ajax({
                 'url': '/ajax-search',
                 'data': {
-                    'vs': $("#vs").val()
+                    'ns': $("#ns").val()
                 },
                 'method': 'get',
                 'success': function(obj) {
@@ -32,18 +32,18 @@
         <thead>
         <tr>
             <th>№ п/п</th>
-            <th>Название видео</th>
-            <th>Игра</th>
+            <th>Название новости</th>
+            <th>Название игры</th>
         </tr>
         </thead>
-        <tbody style="text-align: left">
-            <#if all_videos?has_content>
-                <#list all_videos as vid>
+        <tbody>
+            <#if all_news?has_content>
+                <#list all_news as n>
                 <tr>
-                    <td>${vid?counter}</td>
-                    <td><a href="/watch?v=${vid.getId()}">${vid.getTitle()}</a></td>
-                    <td><#if videoService?has_content>
-                            ${videoService.getGameVideoIsAbout(vid.getId()).getName()}
+                    <td>${n?counter}</td>
+                    <td><a href="/topic?n=${n.getId()}">${n.getTitle()}</a></td>
+                    <td><#if newsService?has_content>
+                            ${newsService.getGameNewsIsAbout(n.getId()).getName()}
                         </#if>
                     </td>
                 </tr>
@@ -53,7 +53,8 @@
     </table>
 </div>
 </#macro>
-<#macro comments></#macro>
+<#macro comments>
+</#macro>
 <#if current_user??>
     <#include "base_log.ftl">
 <#else>

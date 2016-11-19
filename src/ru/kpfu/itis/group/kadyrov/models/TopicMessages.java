@@ -20,6 +20,12 @@ public class TopicMessages {
         this.date = date;
     }
 
+    public TopicMessages(int topic_id, int creator_id, String text) {
+        this.topic_id = topic_id;
+        this.creator_id = creator_id;
+        this.text = text;
+    }
+
     public int getId() {
         return id;
     }

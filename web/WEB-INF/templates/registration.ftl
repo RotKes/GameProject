@@ -11,6 +11,15 @@
     </div>
     <div class=" col-lg-6 col-md-offset-3">
         <form role="form" method="post" action="/registration">
+            <div style="color: red; font-size: medium; text-align: center">
+                <#if wrong_size??>
+                    ${wrong_size}
+                <#elseif user_not_available??>
+                ${user_not_available}
+                <#elseif email_not_available??>
+                ${email_not_available}
+                </#if>
+            </div>
             <div class="form-group col-sm-10 col-md-offset-1">
                 <label for="InputLogin">Логин</label>
                 <input type="text" class="form-control" name="username" id="InputLogin" placeholder="Введите логин">
@@ -25,15 +34,6 @@
             </div>
             <div class="col-sm-offset-7 col-sm-5">
                 <button type="submit" class="btn btn-default">Зарегистрироваться</button>
-            </div>
-            <div>
-                <#if wrong_size??>
-                    ${wrong_size}
-                <#elseif user_not_available??>
-                    ${user_not_available}
-                <#elseif email_not_available??>
-                    ${email_not_available}
-                </#if>
             </div>
         </form>
     </div>

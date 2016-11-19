@@ -5,6 +5,7 @@ import ru.kpfu.itis.group.kadyrov.dao.TopicDao;
 import ru.kpfu.itis.group.kadyrov.dao.implementations.TopicDaoImpl;
 import ru.kpfu.itis.group.kadyrov.dao.TopicMessageDao;
 import ru.kpfu.itis.group.kadyrov.dao.implementations.TopicMessageDaoImpl;
+import ru.kpfu.itis.group.kadyrov.models.TopicMessages;
 import ru.kpfu.itis.group.kadyrov.services.*;
 import ru.kpfu.itis.group.kadyrov.services.implementations.TopicMessageServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.implementations.TopicServiceImpl;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,7 +27,24 @@ import java.util.Map;
 @WebServlet(name = "ForumPageServlet")
 public class ForumPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
 
+        String text = request.getParameter("text");
+        int post_id = Integer.parseInt(request.getParameter("id"));
+
+        UserService userService = new UserServiceImpl();
+        int creator_id = userService.findUser(request.getSession().getAttribute("current_user").toString()).getId();
+
+        TopicMessageService topicMessageService = new TopicMessageServiceImpl();
+
+        try {
+            topicMessageService.addTopicMessage(new TopicMessages(post_id, creator_id, text));
+            response.sendRedirect("/theme?id=" + post_id);
+            return;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,10 +52,14 @@ public class ForumPageServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         Map<String, Object> root = new HashMap<>();
         root.put("current_user", request.getSession().getAttribute("current_user"));
-        root.put("theme", request.getParameter("id"));
+
+        root.put("theme_id", request.getParameter("id"));
+
         TopicService topicService = new TopicServiceImpl();
         TopicMessageService topicMessageService = new TopicMessageServiceImpl();
+
         root.put("all_messages", topicMessageService.getAllTopicMessages(Integer.parseInt(request.getParameter("id"))));
+
         root.put("topicService", topicService);
         root.put("topicMessageService", topicMessageService);
 

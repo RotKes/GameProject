@@ -1,5 +1,7 @@
 package ru.kpfu.itis.group.kadyrov.services;
 
+import org.json.JSONArray;
+import ru.kpfu.itis.group.kadyrov.models.Game;
 import ru.kpfu.itis.group.kadyrov.models.News;
 
 import java.sql.SQLException;
@@ -12,6 +14,8 @@ public interface NewsService {
     void addNews(News news) throws SQLException;
     News findNewsById(int id);
     LinkedList<News> getAllNews();
+    JSONArray getSpecialTitles(String q);
     void deleteNews(int id);
     LinkedList<News> getLastThreeNews();
+    Game getGameNewsIsAbout(int id);
 }

@@ -6,9 +6,8 @@
     <div class="heading col-md-offset-2 col-lg-6">
         <h1>Темы:</h1>
     </div>
-    <div class="search col-lg-8 col-md-offset-1">
-        <h4 class="col-lg-2">Найти:</h4>
-        <p><input type="text" class="form-control col-lg-8" style="width: 400px" placeholder="Search..."></p>
+    <div class="button col-md-offset-8">
+        <a href="#myModal" class="btn btn-primary" data-toggle="modal">Добавить новую тему форума</a>
     </div>
 
     <div class="table-responsive col-md-offset-1 col-lg-10">
@@ -37,6 +36,28 @@
                 </#if>
             </tbody>
         </table>
+    </div>
+    <!-- HTML-код модального окна -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Заголовок модального окна -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Добавить новую тему форума</h4>
+                </div>
+                <!-- Основное содержимое модального окна -->
+                <form role="form" action="/forum" method="POST">
+                    <div class="modal-body">
+                        <textarea type="text" name="title" class="form-control" id="InputText" placeholder="Напишите название темы"></textarea>
+                    </div>
+                    <!-- Футер модального окна -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info">Добавить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </#macro>
 <#macro comments>

@@ -16,13 +16,12 @@ public class TopicMessageDaoImpl implements TopicMessageDao {
     @Override
     public void addTopicMessage(TopicMessages topicMessage) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && topicMessage != null) {
-            String request = "INSERT INTO videos (\"id\",\"topic_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,?,now())";
+            String request = "INSERT INTO messages (\"topic_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setInt(1,topicMessage.getId());
-                statement.setInt(2,topicMessage.getTopic_id());
-                statement.setInt(3,topicMessage.getCreator_id());
-                statement.setString(4,topicMessage.getText());
+                statement.setInt(1,topicMessage.getTopic_id());
+                statement.setInt(2,topicMessage.getCreator_id());
+                statement.setString(3,topicMessage.getText());
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -55,7 +54,7 @@ public class TopicMessageDaoImpl implements TopicMessageDao {
     @Override
     public LinkedList<TopicMessages> getAllTopicMessages(int topic_id) {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT * FROM \"messages\" WHERE topic_id = ? ORDER BY \"date\"";
+            String request = "SELECT * FROM \"messages\" WHERE topic_id = ? ORDER BY \"date\" DESC";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,topic_id);
@@ -86,7 +85,7 @@ public class TopicMessageDaoImpl implements TopicMessageDao {
     @Override
     public LinkedList<TopicMessages> getAllMessages() {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT * FROM \"messages\" ORDER BY \"date\"";
+            String request = "SELECT * FROM \"messages\" ORDER BY \"date\" DESC";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 ResultSet rs = statement.executeQuery();

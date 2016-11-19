@@ -1,14 +1,12 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import ru.kpfu.itis.group.kadyrov.Helper;
-import ru.kpfu.itis.group.kadyrov.models.Game;
-import ru.kpfu.itis.group.kadyrov.services.GameService;
-import ru.kpfu.itis.group.kadyrov.services.implementations.GameServiceImpl;
+import ru.kpfu.itis.group.kadyrov.models.Review;
+import ru.kpfu.itis.group.kadyrov.services.ReviewService;
 import ru.kpfu.itis.group.kadyrov.services.UserService;
+import ru.kpfu.itis.group.kadyrov.services.implementations.ReviewServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.implementations.UserServiceImpl;
+import ru.kpfu.itis.group.kadyrov.services.implementations.VideoServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,18 +14,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Амир on 05.11.2016.
+ * Created by Амир on 17.11.2016.
  */
-@WebServlet(name = "GamesServlet")
-public class GamesServlet extends HttpServlet {
+@WebServlet(name = "ReviewsServlet")
+public class ReviewsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -38,13 +33,15 @@ public class GamesServlet extends HttpServlet {
         Map<String, Object> root = new HashMap<>();
         root.put("current_user", request.getSession().getAttribute("current_user"));
 
-        GameService gameService = new GameServiceImpl();
-        LinkedList<Game> games = gameService.getAllGames();
-        root.put("all_games", games);
+        ReviewService reviewService = new ReviewServiceImpl();
+        root.put("reviewService", reviewService);
+
+        LinkedList<Review> reviews = reviewService.getAllReviews();
+        root.put("all_reviews", reviews);
 
         UserService userService = new UserServiceImpl();
         root.put("userService", userService);
 
-        Helper.render(request, response, "games-list.ftl", root);
+        Helper.render(request, response, "review-list.ftl", root);
     }
 }

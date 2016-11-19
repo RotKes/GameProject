@@ -1,14 +1,13 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import ru.kpfu.itis.group.kadyrov.Helper;
-import ru.kpfu.itis.group.kadyrov.models.Game;
+import ru.kpfu.itis.group.kadyrov.models.Video;
 import ru.kpfu.itis.group.kadyrov.services.GameService;
-import ru.kpfu.itis.group.kadyrov.services.implementations.GameServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.UserService;
+import ru.kpfu.itis.group.kadyrov.services.VideoService;
+import ru.kpfu.itis.group.kadyrov.services.implementations.GameServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.implementations.UserServiceImpl;
+import ru.kpfu.itis.group.kadyrov.services.implementations.VideoServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,20 +15,33 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Амир on 05.11.2016.
+ * Created by Амир on 17.11.2016.
  */
-@WebServlet(name = "GamesServlet")
-public class GamesServlet extends HttpServlet {
+@WebServlet(name = "AddVideoServlet")
+public class AddVideoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
 
+        String game = request.getParameter("game");
+        String link = request.getParameter("link");
+        String title = request.getParameter("title");
+
+        GameService gameService = new GameServiceImpl();
+
+        VideoService videoService = new VideoServiceImpl();
+        try {
+            videoService.addVideo(new Video(gameService.findGame(game).getId(),link,title));
+            response.sendRedirect("/videos");
+            return;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,13 +50,12 @@ public class GamesServlet extends HttpServlet {
         Map<String, Object> root = new HashMap<>();
         root.put("current_user", request.getSession().getAttribute("current_user"));
 
-        GameService gameService = new GameServiceImpl();
-        LinkedList<Game> games = gameService.getAllGames();
-        root.put("all_games", games);
-
         UserService userService = new UserServiceImpl();
         root.put("userService", userService);
 
-        Helper.render(request, response, "games-list.ftl", root);
+        GameService gameService = new GameServiceImpl();
+        root.put("all_games", gameService.getAllGames());
+
+        Helper.render(request, response, "add_video.ftl", root);
     }
 }

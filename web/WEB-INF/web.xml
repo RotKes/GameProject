@@ -34,6 +34,7 @@
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.css</url-pattern>
+        <url-pattern>*.js</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>Logout</servlet-name>
@@ -76,16 +77,8 @@
         <url-pattern>/videos</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>Files</servlet-name>
-        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.FilesServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Files</servlet-name>
-        <url-pattern>/files</url-pattern>
-    </servlet-mapping>
-    <servlet>
         <servlet-name>VideoDesc</servlet-name>
-        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.VideoDescripionServlet</servlet-class>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.VideoDescriptionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>VideoDesc</servlet-name>
@@ -131,13 +124,60 @@
         <servlet-name>Admin</servlet-name>
         <url-pattern>/admin</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Reviews</servlet-name>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.ReviewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Reviews</servlet-name>
+        <url-pattern>/reviews</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Review</servlet-name>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.SpecificReviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Review</servlet-name>
+        <url-pattern>/review</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Game</servlet-name>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.SpecificGameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Game</servlet-name>
+        <url-pattern>/game</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddNews</servlet-name>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.AddNewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddNews</servlet-name>
+        <url-pattern>/add_news</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddVideo</servlet-name>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.AddVideoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddVideo</servlet-name>
+        <url-pattern>/add_video</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddReview</servlet-name>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.AddReviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddReview</servlet-name>
+        <url-pattern>/add_review</url-pattern>
+    </servlet-mapping>
     <filter-mapping>
         <filter-name>GuestFilter</filter-name>
         <url-pattern>/</url-pattern>
         <url-pattern>/logout</url-pattern>
         <url-pattern>/theme</url-pattern>
         <url-pattern>/forum</url-pattern>
-        <url-pattern>/files</url-pattern>
         <url-pattern>/user</url-pattern>
     </filter-mapping>
     <filter-mapping>

@@ -1,17 +1,17 @@
 <#ftl encoding="utf-8"/>
 <#macro head>
-<title>Add Video</title>
+<title>Reviews</title>
 </#macro>
 <#macro page>
 <div class="heading col-md-offset-2 col-lg-6">
-    <h1>Добавить Видео</h1>
+    <h1>Добавить новость</h1>
 </div>
 
 <div class=" col-lg-6 col-md-offset-3">
-    <form role="form" action="/add_video" method="POST">
+    <form role="form" action="/add_news" method="POST">
         <div class="form-group col-sm-10 col-md-offset-1">
-            <label for="InputHeader">Заголовок видео</label>
-            <input type="text" class="form-control" id="InputHeader" name="title" placeholder="Введите название">
+            <label for="InputHeader">Заголовок</label>
+            <input type="text" class="form-control" name="header" id="header" placeholder="Введите название">
         </div>
         <div class="form-group col-sm-10 col-md-offset-1">
             <label for="InputGame">Название игры</label>
@@ -22,8 +22,8 @@
             </select>
         </div>
         <div class="form-group col-sm-10 col-md-offset-1">
-            <label for="InputText">Ссылка на видео</label>
-            <textarea class="form-control" id="InputText" name="link" placeholder="Введите текст"></textarea>
+            <label for="InputText">Текст</label>
+            <textarea class="form-control" id="text" name="text" placeholder="Введите текст"></textarea>
         </div>
         <div class="col-sm-offset-7 col-sm-5">
             <button type="submit" class="btn btn-default">Отправить</button>

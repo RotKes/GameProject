@@ -2,18 +2,6 @@
 <#macro head>
 <title>Main</title>
 <script type="application/javascript" src="/js/jquery-1.5.min.js"></script>
-
-<script type="application/javascript" src="/js/jquery.jcarousel.js"></script>
-
-<script type="application/javascript">
-    jQuery(document).ready(function () {
-        // Initialise the first and second carousel by class selector.
-        // Note that they use both the same configuration options (none in this case).
-        jQuery('.d-carousel .carousel').jcarousel({
-            scroll: 1
-        });
-    });
-</script>
 </#macro>
 <#macro page>
     <div class="main">
@@ -36,7 +24,11 @@
                                     <p class="img"><img class="img-responsive img-rounded"
                                                         src="http://mywishlist.ru/pic/i/wish/orig/006/163/366.png" alt="News image"></p>
                                     <h3 style="font-weight: bold">${news.getTitle()}</h3>
-                                    <p>${news.getText()?substring(0,150)}...</p>
+                                    <#if news.getText()?length < 150>
+                                        <p>${news.getText()?substring(0,news.getText()?length)}...</p>
+                                    <#else>
+                                        <p>${news.getText()?substring(0,(news.getText()?length)/5)}...</p>
+                                    </#if>
                                     <p><a class="btn btn-default" href="/topic?n=${news.getId()}" role="button">Подробнее &raquo;</a></p>
                                 </div>
                             </#list>

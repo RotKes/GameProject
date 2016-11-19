@@ -16,7 +16,7 @@ public class VideoCommentDaoImpl implements VideoCommentDao {
     @Override
     public void addVideoComment(CommentVideo comment) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && comment != null) {
-            String request = "INSERT INTO comment_videos (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,now())";
+            String request = "INSERT INTO comment_videos (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,comment.getPost_id());
@@ -54,7 +54,7 @@ public class VideoCommentDaoImpl implements VideoCommentDao {
     @Override
     public LinkedList<CommentVideo> getAllVideoComments() {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT * FROM comment_videos ORDER BY \"date\"";
+            String request = "SELECT * FROM comment_videos ORDER BY \"date\" DESC";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 ResultSet rs = statement.executeQuery();
@@ -84,9 +84,10 @@ public class VideoCommentDaoImpl implements VideoCommentDao {
     @Override
     public LinkedList<CommentVideo> getAllVideoCommentsOfPostById(int post_id) {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT * FROM comment_videos WHERE \"post_id\" = ? ORDER BY \"date\"";
+            String request = "SELECT * FROM comment_videos WHERE \"post_id\" = ? ORDER BY \"date\" DESC";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
+                statement.setInt(1, post_id);
                 ResultSet rs = statement.executeQuery();
                 LinkedList<CommentVideo> linkedList = new LinkedList<CommentVideo>();
                 CommentVideo comment;

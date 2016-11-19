@@ -24,6 +24,14 @@ public class Review {
         this.date = date;
     }
 
+    public Review(int creator_id, int game_id, String title, String text, int rate) {
+        this.creator_id = creator_id;
+        this.game_id = game_id;
+        this.title = title;
+        this.text = text;
+        this.rate = rate;
+    }
+
     public int getId() {
         return id;
     }

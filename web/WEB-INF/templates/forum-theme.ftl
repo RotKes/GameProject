@@ -4,11 +4,11 @@
 </#macro>
 <#macro page>
     <div class="heading col-md-offset-2 col-lg-6">
-        <h1>${topicService.findTopicById(theme?number).getTitle()}</h1>
+        <h1>${topicService.findTopicById(theme_id?number).getTitle()}</h1>
     </div>
     <div class="answer col-lg-4">
         <p class="button">
-            <button type="button" class="btn btn-primary" style="width: 200px" href="#">Ответить</button>
+            <a href="#myModal" class="btn btn-primary" data-toggle="modal">Ответить</a>
         </p>
     </div>
     <div class="messages">
@@ -30,6 +30,30 @@
             </#list>
         </#if>
     </div>
+    <!-- HTML-код модального окна -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Заголовок модального окна -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Написать сообщение</h4>
+                </div>
+                <!-- Основное содержимое модального окна -->
+                <form role="form" action="/theme?id=${theme_id}" method="POST">
+                    <div class="modal-body">
+                                <textarea class="form-control" name="text" id="InputText" type="text"
+                                          placeholder="Напишите свое сообщение"></textarea>
+                    </div>
+                    <!-- Футер модального окна -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </#macro>
 <#macro comments>
 </#macro>

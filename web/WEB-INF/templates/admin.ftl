@@ -22,7 +22,6 @@
                 <li><a href="/admin?t=forum">Форум</a></li>
                 <li><a href="/admin?t=token">Куки</a></li>
                 <li><a href="/admin?t=forumm">Сообщения на форуме</a></li>
-                <li><a href="/admin?t=fcomments">Комменты к файлам</a></li>
                 <li><a href="/admin?t=ncomments">Комменты к новостям</a></li>
                 <li><a href="/admin?t=vcomments">Комменты к видео</a></li>
                 <li><a href="/admin?t=rcomments">Комменты к обзорам</a></li>

@@ -84,5 +84,6 @@ public class LoginServlet extends HttpServlet {
         }
         root.put("login", request.getParameter("login"));
         Helper.render(request, response, "login.ftl", root);
+        root.clear();
     }
 }

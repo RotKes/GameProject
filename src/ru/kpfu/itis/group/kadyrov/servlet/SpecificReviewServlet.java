@@ -1,12 +1,13 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
 import ru.kpfu.itis.group.kadyrov.Helper;
-import ru.kpfu.itis.group.kadyrov.models.CommentNews;
-import ru.kpfu.itis.group.kadyrov.services.NewsCommentService;
-import ru.kpfu.itis.group.kadyrov.services.NewsService;
+import ru.kpfu.itis.group.kadyrov.models.CommentReview;
+import ru.kpfu.itis.group.kadyrov.models.Review;
+import ru.kpfu.itis.group.kadyrov.services.ReviewCommentService;
+import ru.kpfu.itis.group.kadyrov.services.ReviewService;
 import ru.kpfu.itis.group.kadyrov.services.UserService;
-import ru.kpfu.itis.group.kadyrov.services.implementations.NewsCommentServiceImpl;
-import ru.kpfu.itis.group.kadyrov.services.implementations.NewsServiceImpl;
+import ru.kpfu.itis.group.kadyrov.services.implementations.ReviewCommentServiceImpl;
+import ru.kpfu.itis.group.kadyrov.services.implementations.ReviewServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.implementations.UserServiceImpl;
 
 import javax.servlet.ServletException;
@@ -20,28 +21,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Амир on 12.11.2016.
+ * Created by Амир on 17.11.2016.
  */
-@WebServlet(name = "SpecificNewsServlet")
-public class SpecificNewsServlet extends HttpServlet {
+@WebServlet(name = "SpecificReviewServlet")
+public class SpecificReviewServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
         String text = request.getParameter("comment_text");
-        int post_id = Integer.parseInt(request.getParameter("n"));
+        int post_id = Integer.parseInt(request.getParameter("r"));
+
+        ReviewCommentService reviewCommentService = new ReviewCommentServiceImpl();
 
         UserService userService = new UserServiceImpl();
-        int creator_id = userService.findUser(request.getSession().getAttribute("current_user").toString()).getId();
-
-        NewsCommentService newsCommentService = new NewsCommentServiceImpl();
+        int user_id = userService.findUser(request.getSession().getAttribute("current_user").toString()).getId();
 
         try {
-            newsCommentService.addNewsComment(new CommentNews(post_id, creator_id, text));
-            response.sendRedirect("/topic?n=" + post_id);
+            reviewCommentService.addReviewComment(new CommentReview(post_id, user_id, text));
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        response.sendRedirect("/review?r=" + post_id);
         return;
     }
 
@@ -55,14 +56,14 @@ public class SpecificNewsServlet extends HttpServlet {
         UserService userService = new UserServiceImpl();
         root.put("userService", userService);
 
-        root.put("news_id", request.getParameter("n"));
+        root.put("review_id", request.getParameter("r"));
 
-        NewsCommentService newsCommentService = new NewsCommentServiceImpl();
-        root.put("newsCommentService",newsCommentService);
+        ReviewCommentService reviewCommentService = new ReviewCommentServiceImpl();
+        root.put("reviewCommentService", reviewCommentService);
 
-        NewsService newsService = new NewsServiceImpl();
-        root.put("newsService", newsService);
+        ReviewService reviewService = new ReviewServiceImpl();
+        root.put("reviewService", reviewService);
 
-        Helper.render(request, response, "news.ftl", root);
+        Helper.render(request, response, "review.ftl", root);
     }
 }

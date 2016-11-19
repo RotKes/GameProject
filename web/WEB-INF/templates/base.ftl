@@ -7,6 +7,8 @@
 <link href = "/css/bootstrap.css"
       rel = "stylesheet"
       type="text/css"/>
+<link href="/css/jquery.rating.css" rel="stylesheet" type="text/css"/>
+<link href="/css/styles_rating.css" rel="stylesheet" type="text/css"/>
 <head>
     <meta charset="UTF-8">
     <@head/>
@@ -16,7 +18,7 @@
     <div class="header">
         <div class="row">
             <div class="col-lg-7 col-md-offset-1 name_of_site">
-                <a href="/">Games</a>
+                <a href="/">Epic Frag</a>
             </div>
             <div class="col-lg-4">
                 <p class="button">

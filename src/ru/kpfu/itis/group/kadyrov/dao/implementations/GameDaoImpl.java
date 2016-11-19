@@ -34,7 +34,7 @@ public class GameDaoImpl implements GameDao {
 
     @Override
     public Game findGame(String name) {
-        if (ConnectionSingleton.getInstance().getConnection()!= null && !name.equals("")) {
+        if (ConnectionSingleton.getInstance().getConnection()!= null) {
             String request = "SELECT * FROM games WHERE \"name\" = ? ";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
@@ -56,12 +56,12 @@ public class GameDaoImpl implements GameDao {
     }
 
     @Override
-    public Game findGameById(String id) {
-        if (ConnectionSingleton.getInstance().getConnection()!= null && !id.equals("")) {
+    public Game findGameById(int id) {
+        if (ConnectionSingleton.getInstance().getConnection()!= null) {
             String request = "SELECT * FROM games WHERE id = ? ";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setString(1,id);
+                statement.setInt(1,id);
                 ResultSet rs = statement.executeQuery();
                 while (rs.next()) {
                     return new Game(rs.getInt("id"),
@@ -110,12 +110,12 @@ public class GameDaoImpl implements GameDao {
     }
 
     @Override
-    public void deleteGame(String id) {
-        if (ConnectionSingleton.getInstance().getConnection() != null && !id.equals("")) {
+    public void deleteGame(int id) {
+        if (ConnectionSingleton.getInstance().getConnection() != null) {
             String request = "DELETE FROM games WHERE id = ? ";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setString(1,id);
+                statement.setInt(1,id);
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();

@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
                         return new SystemMessage("user_registration", " зарегистрирован.");
                     }
                     else {
-                        return new SystemMessage("email_not_available", "Данный e-mail уже используется.");
+                        return new SystemMessage("email_not_available", "Данный e-mail уже зарегистрирован.");
                     }
                 }
                 else {

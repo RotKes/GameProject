@@ -28,7 +28,7 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public Game findGameById(String id) {
+    public Game findGameById(int id) {
         return gameDao.findGameById(id);
     }
 
@@ -58,7 +58,7 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public void deleteGame(String id) {
+    public void deleteGame(int id) {
         gameDao.deleteGame(id);
     }
 

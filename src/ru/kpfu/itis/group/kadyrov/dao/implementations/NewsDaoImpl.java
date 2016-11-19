@@ -16,13 +16,12 @@ public class NewsDaoImpl implements NewsDao {
     @Override
     public void addNews(News news) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && news != null) {
-            String request = "INSERT INTO news (\"id\",\"game_id\",\"title\",\"text\",\"date\") VALUES (?,?,?,?,now())";
+            String request = "INSERT INTO news (\"game_id\",\"title\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setInt(1,news.getId());
-                statement.setInt(2,news.getGame_id());
-                statement.setString(3,news.getTitle());
-                statement.setString(4,news.getText());
+                statement.setInt(1,news.getGame_id());
+                statement.setString(2,news.getTitle());
+                statement.setString(3,news.getText());
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();

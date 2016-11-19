@@ -22,23 +22,29 @@
 </#macro>
 <#macro comments>
 <div class="comments col-lg-12">
-    <h3 class="title-comments">Комментарии (6)</h3>
+    <h3 class="title-comments">Комментарии (${videoCommentService.getNumberOfCommentsInThisVideo(video_id?number)})</h3>
     <ul class="media-list">
-        <li class="media">
-            <div class="media-heading col-lg-2">
-                <div class="author">Дима</div>
-                <div class="metadata">
-                    <span class="date">16 ноября 2015, 13:43</span>
-                </div>
-            </div>
-            <div class="media-text text-justify col-lg-10">Текст комментария</div>
-        </li>
+        <#if videoCommentService.getAllVideoCommentsOfPostById(video_id?number)?has_content>
+            <#list videoCommentService.getAllVideoCommentsOfPostById(video_id?number) as comment>
+                <li class="media">
+                    <div class="media-heading col-lg-2">
+                        <div class="author">${videoCommentService.getCreatorOfMessage(comment.getId()).getLogin()}</div>
+                        <div class="metadata">
+                            <span class="date">${comment.getDate()}</span>
+                        </div>
+                    </div>
+                    <div class="media-text text-justify col-lg-10">${comment.getText()}</div>
+                </li>
+            </#list>
+        </#if>
     </ul>
     <#if current_user??>
-        <textarea class="col-lg-10"></textarea>
-        <div class="add col-lg-2">
-            <button type="button" class="btn btn-default " href="#">Ответить</button>
-        </div>
+        <form role="form" action="/watch?v=${video_id}" method="POST">
+            <textarea class="col-lg-10" name="comment_text"></textarea>
+            <div class="add col-lg-2">
+                <button type="submit" class="btn btn-default">Ответить</button>
+            </div>
+        </form>
     </#if>
 </div>
 </#macro>
