@@ -179,6 +179,9 @@
         <url-pattern>/theme</url-pattern>
         <url-pattern>/forum</url-pattern>
         <url-pattern>/user</url-pattern>
+        <url-pattern>/add_review</url-pattern>
+        <url-pattern>/review</url-pattern>
+        <url-pattern>/reviews</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>UserFilter</filter-name>
@@ -188,5 +191,7 @@
     <filter-mapping>
         <filter-name>AdminFilter</filter-name>
         <url-pattern>/admin</url-pattern>
+        <url-pattern>/add_video</url-pattern>
+        <url-pattern>/add_news</url-pattern>
     </filter-mapping>
 </web-app>
