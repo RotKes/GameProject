@@ -13,6 +13,7 @@ import ru.kpfu.itis.group.kadyrov.verifier.UserVerifier;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
 
 /**
  * Created by Амир on 04.11.2016.
@@ -83,6 +84,36 @@ public class UserServiceImpl implements UserService {
 
     private boolean correctSize(String string) {
         return (string.length() >= 2 && string.length() <= 30);
+    }
+
+    @Override
+    public LinkedList<User> getAllUsers() {
+        if (ConnectionSingleton.getInstance().getConnection()!= null) {
+            String request = "SELECT * FROM \"users\"";
+            try {
+                PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
+                ResultSet rs = statement.executeQuery();
+                LinkedList<User> linkedList = new LinkedList<User>();
+                User user;
+                while (rs.next()) {
+                    try {
+                        user = new User(rs.getString("id"),
+                                rs.getInt("group_id"),
+                                rs.getString("login"),
+                                rs.getString("e-mail"),
+                                rs.getString("password"));
+                    } catch (Exception e) {
+                        user = null;
+                        e.printStackTrace();
+                    }
+                    linkedList.addFirst(user);
+                }
+                return linkedList;
+            } catch (SQLException sql) {
+                sql.printStackTrace();
+            }
+        }
+        return null;
     }
 
     @Override

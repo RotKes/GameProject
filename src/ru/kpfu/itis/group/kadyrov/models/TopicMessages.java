@@ -30,39 +30,19 @@ public class TopicMessages {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getTopic_id() {
         return topic_id;
-    }
-
-    public void setTopic_id(int topic_id) {
-        this.topic_id = topic_id;
     }
 
     public int getCreator_id() {
         return creator_id;
     }
 
-    public void setCreator_id(int creator_id) {
-        this.creator_id = creator_id;
-    }
-
     public String getText() {
         return text;
     }
 
-    public void setText(String text) {
-        this.text = text;
-    }
-
     public String getDate() {
         return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 }

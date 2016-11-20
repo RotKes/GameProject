@@ -38,7 +38,7 @@ public class UserDaoImpl implements UserDao {
                 statement.setString(1,login);
                 ResultSet rs = statement.executeQuery();
                 while (rs.next()) {
-                    return new User(rs.getString("id"),
+                    return new User(rs.getInt("id"),
                             rs.getInt("group_id"),
                             rs.getString("login"),
                             rs.getString("e-mail"),

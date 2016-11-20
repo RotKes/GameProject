@@ -18,6 +18,14 @@ public class User {
         this.password = password;
     }
 
+    public User(int id, int group_id, String login, String email, String password) {
+        this.id = id;
+        this.group_id = group_id;
+        this.login = login;
+        this.email = email;
+        this.password = password;
+    }
+
     public User(int group_id, String login, String email, String password) {
         this.group_id = group_id;
         this.login = login;

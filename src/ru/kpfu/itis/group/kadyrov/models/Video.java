@@ -35,10 +35,6 @@ public class Video {
         return videoLink;
     }
 
-    public void setVideoLink(String videoLink) {
-        this.videoLink = videoLink;
-    }
-
     public int getId() {
         return id;
     }
