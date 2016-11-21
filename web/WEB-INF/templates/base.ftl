@@ -9,6 +9,7 @@
       type="text/css"/>
 <link href="/css/jquery.rating.css" rel="stylesheet" type="text/css"/>
 <link href="/css/styles_rating.css" rel="stylesheet" type="text/css"/>
+<script src="/js/sorttable.js"></script>
 <head>
     <meta charset="UTF-8">
     <@head/>

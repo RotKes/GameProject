@@ -24,12 +24,11 @@ public class AdminServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         String table = "";
-        //TODO
-        /*if (request.getParameter("user_id") != null) {
+        if (request.getParameter("user_id") != null) {
             table = "users";
             UserService userService = new UserServiceImpl();
             userService.deleteUser(request.getParameter("user_id"));
-        }*/
+        }
         if (request.getParameter("comment_news") != null) {
             table = "comment_news";
             NewsCommentService newsCommentService = new NewsCommentServiceImpl();

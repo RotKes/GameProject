@@ -27,18 +27,20 @@
                 <li><a href="/admin?t=comment_news">Комменты к новостям</a></li>
                 <li><a href="/admin?t=comment_videos">Комменты к видео</a></li>
                 <li><a href="/admin?t=comment_reviews">Комменты к обзорам</a></li>
+                <li><a href="/">Выход</a></li>
             </ul>
         </div>
     </nav>
     <div class="container">
         <div class="table-responsive col-md-offset-1 col-lg-10">
-            <table class="table table-bordered">
+            <table class="table table-bordered sortable">
                 <thead>
                 <tr>
                     <#if all_columns?has_content>
                         <#list all_columns as column>
                                 <td>${column}</td>
                         </#list>
+                        <td>Удалить</td>
                     </#if>
                 </tr>
                 </thead>
@@ -46,15 +48,15 @@
                     <#if all_users?has_content>
                         <#list all_users as user>
                         <tr>
-                            <td>${user.getId()}</td>
+                            <td>${user.getId()?c}</td>
                             <td>${user.getGroup_id()}</td>
                             <td>${user.getLogin()}</td>
                             <td>${user.getEmail()}</td>
                             <td>${user.getPassword()}</td>
-                            <#--<td><form action="/admin" method="post">
-                                <button class="btn btn-primary" type="submit" name="user_id" value="${user.getId()}">Удалить</button>
+                            <td><form action="/admin" method="post">
+                                <button class="btn btn-primary" type="submit" name="user_id" value="${user.getId()?c}">Удалить</button>
                                 </form>
-                            </td>-->
+                            </td>
                         </tr>
                         </#list>
                     <#elseif all_news_comments?has_content>

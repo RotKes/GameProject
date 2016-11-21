@@ -12,7 +12,7 @@
     </p>
 </div>
 <div class="table-responsive col-md-offset-1 col-lg-10">
-    <table class="table table-striped">
+    <table class="table table-striped sortable">
         <thead>
         <tr>
             <th>№ п/п</th>

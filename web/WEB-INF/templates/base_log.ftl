@@ -10,6 +10,7 @@
     <link href="/css/styles_rating.css" rel="stylesheet" type="text/css"/>
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/sorttable.js"></script>
 </head>
 <body>
 <div class="container">

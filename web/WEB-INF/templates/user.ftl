@@ -5,14 +5,17 @@
 <#macro page>
     <#if userService.findUserId(user_id).getGroup_id() == 2>
     <div class="heading col-lg-12">
-        <div class="col-md-offset-2 col-lg-6">
+        <div class="col-md-offset-2 col-lg-8">
             <h1>Администратор</h1>
+            <p class="button">
+                <button type="button" class="btn btn-primary" style="width: 200px" onclick="location.href = '/admin'">Таблицы БД</button>
+            </p>
         </div>
     </div>
     <div class="col-lg-12">
-        <div class="but col-md-offset-3">
+        <div class="but col-lg-8 col-md-offset-2">
             <button type="button" class="btn btn-primary" style="width: 200px" onclick="location.href = '/add_news'">Добавить новость</button>
-            <button type="button" class="btn btn-primary col-md-offset-3" style="width: 200px" onclick="location.href ='/add_video'">Добавить видео</button>
+            <button type="button" class="btn btn-primary" style="width: 200px" onclick="location.href ='/add_video'">Добавить видео</button>
             <button type="button" class="btn btn-primary" style="width: 200px" onclick="location.href = '/add_game'">Добавить игру</button>
         </div>
     </div>
