@@ -13,6 +13,7 @@
         <div class="but col-md-offset-3">
             <button type="button" class="btn btn-primary" style="width: 200px" onclick="location.href = '/add_news'">Добавить новость</button>
             <button type="button" class="btn btn-primary col-md-offset-3" style="width: 200px" onclick="location.href ='/add_video'">Добавить видео</button>
+            <button type="button" class="btn btn-primary" style="width: 200px" onclick="location.href = '/add_game'">Добавить игру</button>
         </div>
     </div>
     <#elseif userService.findUserId(user_id).getGroup_id() == 1>

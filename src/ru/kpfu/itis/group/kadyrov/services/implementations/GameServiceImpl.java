@@ -10,7 +10,9 @@ import ru.kpfu.itis.group.kadyrov.singleton.ConnectionSingleton;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Амир on 08.11.2016.
@@ -33,21 +35,26 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public JSONArray getNamesOfSpecialGames(String q) {
-        if (ConnectionSingleton.getInstance().getConnection()!= null && !q.equals("")) {
-            String request = "SELECT \"name\" FROM games WHERE name LIKE ? ORDER BY \"name\"";
+    public List<Game> getSpecialGames(String q) {
+        if (ConnectionSingleton.getInstance().getConnection()!= null) {
+            String request = "SELECT * FROM games WHERE name LIKE ? ORDER BY \"name\"";
+            List<Game> list = new ArrayList<>();
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setString(1,"%" + q + "%");
                 ResultSet rs = statement.executeQuery();
-                JSONArray ja = new JSONArray();
                 while (rs.next()) {
-                    ja.put(rs.getString("name"));
+                    list.add(new Game(rs.getInt("id"),
+                            rs.getString("name"),
+                            rs.getString("date"),
+                            rs.getString("description"),
+                            rs.getString("image"),
+                            rs.getInt("rate")));
                 }
-                return ja;
             } catch (SQLException sql) {
                 sql.printStackTrace();
             }
+            return list;
         }
         return null;
     }

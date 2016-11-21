@@ -91,24 +91,4 @@ public class NewsServiceImpl implements NewsService {
         }
         return null;
     }
-
-    @Override
-    public JSONArray getSpecialTitles(String q) {
-        if (ConnectionSingleton.getInstance().getConnection()!= null && !q.equals("")) {
-            String request = "SELECT \"title\" FROM news WHERE title LIKE ? ORDER BY \"title\"";
-            try {
-                PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setString(1,"%" + q + "%");
-                ResultSet rs = statement.executeQuery();
-                JSONArray ja = new JSONArray();
-                while (rs.next()) {
-                    ja.put(rs.getString("title"));
-                }
-                return ja;
-            } catch (SQLException sql) {
-                sql.printStackTrace();
-            }
-        }
-        return null;
-    }
 }

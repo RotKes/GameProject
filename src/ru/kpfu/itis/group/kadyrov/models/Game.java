@@ -20,6 +20,13 @@ public class Game {
         this.rating = rating;
     }
 
+    public Game(String name, String date, String description, String imageURL) {
+        this.name = name;
+        this.date = date;
+        this.description = description;
+        this.imageURL = imageURL;
+    }
+
     public int getId() {
         return id;
     }

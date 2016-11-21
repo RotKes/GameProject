@@ -16,15 +16,13 @@ public class GameDaoImpl implements GameDao {
     @Override
     public void addGame(Game game) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && game != null) {
-            String request = "INSERT INTO games (\"id\",\"name\",\"date\",\"description\",\"image\",\"rate\") VALUES (?,?,?,?,?,?) ";
+            String request = "INSERT INTO games (\"name\",\"date\",\"description\",\"image\") VALUES (?,?,?,?) ";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setInt(1,game.getId());
-                statement.setString(2,game.getName());
-                statement.setString(3,game.getDate());
-                statement.setString(4,game.getDescription());
-                statement.setString(5,game.getImageURL());
-                statement.setInt(6,game.getRating());
+                statement.setString(1,game.getName());
+                statement.setString(2,game.getDate());
+                statement.setString(3,game.getDescription());
+                statement.setString(4,game.getImageURL());
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();

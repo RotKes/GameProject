@@ -172,6 +172,14 @@
         <servlet-name>AddReview</servlet-name>
         <url-pattern>/add_review</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>AddGame</servlet-name>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.AddGameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddGame</servlet-name>
+        <url-pattern>/add_game</url-pattern>
+    </servlet-mapping>
     <filter-mapping>
         <filter-name>GuestFilter</filter-name>
         <url-pattern>/</url-pattern>

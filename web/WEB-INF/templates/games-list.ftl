@@ -13,41 +13,44 @@
         <script type="application/javascript">
             var f = function() {
                 $.ajax({
+                    'contentType': 'application/javascript; charset=utf-8',
                     'url': '/ajax-search',
                     'data': {
                         'gs': $("#gs").val()
                     },
                     'method': 'get',
                     'success': function(obj) {
-                        $("#res").html(obj.result.join(", "));
+                        var data = obj.result;
+                        var htmlText = "";
+                        for (var key in data) {
+                            htmlText += "<div class=\"col-lg-12\">";
+                            htmlText += "<div class=\"game\">";
+                            htmlText += "<div class=\"col-lg-2\">";
+                            htmlText += "<p class=\"img\"><img class=\"img-responsive img-rounded\" src=\"" + data[key].imageURL + "\" alt=\"Game image\"></p>";
+                            htmlText += "</div>";
+                            htmlText += "<div class=\"description col-lg-10\">";
+                            htmlText += "<h3><a href=\"/game?g=" + data[key].id + "\">" + data[key].name + "</a></h3>";
+                            htmlText += "<div class=\"rating\">";
+                            htmlText += "<p>Рейтинг: "+ data[key].rating + "</p>";
+                            htmlText += "</div>";
+                            htmlText += "</div>";
+                            htmlText += "</div>";
+                            htmlText += "</div>";
+                        }
+                        $("#res").html(htmlText);
                     }
                 });
+            }
+
+            $(document).ready()
+            {
+                f();
             }
         </script>
     </div>
     <div id="res" class="col-lg-10 col-md-offset-1" style="margin-bottom: 15px">
 
     </div>
-    <#if all_games?has_content>
-        <#list all_games as games>
-        <li style="list-style-type: none">
-            <div class="col-lg-12">
-                <div class="game">
-                    <div class="col-lg-2">
-                        <p class="img"><img class="img-responsive img-rounded"
-                                            src='${games.getImageURL()}'
-                                            alt="Game image"></p>
-                    </div>
-                    <div class="description col-lg-10">
-                        <h3><a href="/game?g=${games.getId()}">${games.getName()}</a></h3>
-                        <div class="rating">
-                            <p>Рейтинг: ${games.getRating()}</p>
-                    </div>
-                </div>
-            </div>
-        </div></li>
-        </#list>
-    </#if>
 </#macro>
 <#macro comments>
 </#macro>

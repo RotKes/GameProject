@@ -34,26 +34,6 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public JSONArray getTitlesOfSpecialVideos(String q) {
-        if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "SELECT title FROM videos WHERE title LIKE ?  ORDER BY \"date\" DESC, title";
-            try {
-                PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setString(1,"%" + q + "%");
-                ResultSet rs = statement.executeQuery();
-                JSONArray ja = new JSONArray();
-                while (rs.next()) {
-                    ja.put(rs.getString("title"));
-                }
-                return ja;
-            } catch (SQLException sql) {
-                sql.printStackTrace();
-            }
-        }
-        return null;
-    }
-
-    @Override
     public LinkedList<Video> getAllVideos() {
         return videoDao.getAllVideos();
     }

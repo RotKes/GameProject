@@ -14,7 +14,6 @@ public interface VideoService {
     void addVideo(Video video) throws SQLException;
     Video findVideo(String title);
     Video findVideoById(int id);
-    JSONArray getTitlesOfSpecialVideos(String q);
     LinkedList<Video> getAllVideos();
     void deleteVideo(int id);
     Game getGameVideoIsAbout(int id);

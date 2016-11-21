@@ -11,11 +11,11 @@
     <form role="form" action="/add_news" method="POST">
         <div class="form-group col-sm-10 col-md-offset-1">
             <label for="InputHeader">Заголовок</label>
-            <input type="text" class="form-control" name="header" id="header" placeholder="Введите название">
+            <input required type="text" class="form-control" name="header" id="header" placeholder="Введите название">
         </div>
         <div class="form-group col-sm-10 col-md-offset-1">
             <label for="InputGame">Название игры</label>
-            <select class="form-control input-lg" id="InputType" name="game">
+            <select required class="form-control input-lg" id="InputType" name="game">
                 <#list all_games as game>
                     <option value="${game.getName()}">${game.getName()}</option>
                 </#list>
@@ -23,7 +23,7 @@
         </div>
         <div class="form-group col-sm-10 col-md-offset-1">
             <label for="InputText">Текст</label>
-            <textarea class="form-control" id="text" name="text" placeholder="Введите текст"></textarea>
+            <textarea required class="form-control" id="text" name="text" placeholder="Введите текст"></textarea>
         </div>
         <div class="col-sm-offset-7 col-sm-5">
             <button type="submit" class="btn btn-default">Отправить</button>
