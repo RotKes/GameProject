@@ -1,25 +1,18 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
-import ru.kpfu.itis.group.kadyrov.Helper;
+import ru.kpfu.itis.group.kadyrov.utils.Helper;
 import ru.kpfu.itis.group.kadyrov.models.User;
 import ru.kpfu.itis.group.kadyrov.services.TokenService;
 import ru.kpfu.itis.group.kadyrov.services.implementations.TokenServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.UserService;
 import ru.kpfu.itis.group.kadyrov.services.implementations.UserServiceImpl;
-import ru.kpfu.itis.group.kadyrov.singleton.ConnectionSingleton;
 import ru.kpfu.itis.group.kadyrov.utils.Hash;
-import ru.kpfu.itis.group.kadyrov.utils.SystemMessage;
 import ru.kpfu.itis.group.kadyrov.utils.Token;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 

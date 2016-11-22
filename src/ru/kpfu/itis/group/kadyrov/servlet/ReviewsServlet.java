@@ -1,12 +1,11 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
-import ru.kpfu.itis.group.kadyrov.Helper;
+import ru.kpfu.itis.group.kadyrov.utils.Helper;
 import ru.kpfu.itis.group.kadyrov.models.Review;
 import ru.kpfu.itis.group.kadyrov.services.ReviewService;
 import ru.kpfu.itis.group.kadyrov.services.UserService;
 import ru.kpfu.itis.group.kadyrov.services.implementations.ReviewServiceImpl;
 import ru.kpfu.itis.group.kadyrov.services.implementations.UserServiceImpl;
-import ru.kpfu.itis.group.kadyrov.services.implementations.VideoServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

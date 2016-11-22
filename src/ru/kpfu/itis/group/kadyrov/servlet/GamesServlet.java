@@ -1,9 +1,6 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import ru.kpfu.itis.group.kadyrov.Helper;
+import ru.kpfu.itis.group.kadyrov.utils.Helper;
 import ru.kpfu.itis.group.kadyrov.models.Game;
 import ru.kpfu.itis.group.kadyrov.services.GameService;
 import ru.kpfu.itis.group.kadyrov.services.implementations.GameServiceImpl;
@@ -16,11 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**

@@ -180,6 +180,14 @@
         <servlet-name>AddGame</servlet-name>
         <url-pattern>/add_game</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ForImages</servlet-name>
+        <servlet-class>ru.kpfu.itis.group.kadyrov.servlet.FileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForImages</servlet-name>
+        <url-pattern>/files/*</url-pattern>
+    </servlet-mapping>
     <filter-mapping>
         <filter-name>GuestFilter</filter-name>
         <url-pattern>/</url-pattern>

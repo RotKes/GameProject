@@ -1,6 +1,6 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
-import ru.kpfu.itis.group.kadyrov.Helper;
+import ru.kpfu.itis.group.kadyrov.utils.Helper;
 import ru.kpfu.itis.group.kadyrov.models.Game;
 import ru.kpfu.itis.group.kadyrov.models.News;
 import ru.kpfu.itis.group.kadyrov.services.GameService;

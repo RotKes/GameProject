@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8da0a83e-9046-42ad-9004-e0424b479c28" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/FileServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/AddImage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/Helper.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/Helper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/GameDaoImpl.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/GameDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/GameServiceImpl.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/GameServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddGameServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddGameServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddNewsServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddNewsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddReviewServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddReviewServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddTopicServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddTopicServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddVideoServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddVideoServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AdminServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AdminServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ForumPageServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ForumPageServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ForumServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ForumServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/GamesServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/GamesServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/LoginServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/LoginServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/MainServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/MainServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/MessagesServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/MessagesServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/NewsServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/NewsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/RegistrationServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/RegistrationServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ReviewsServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ReviewsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificGameServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificGameServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificNewsServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificNewsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificReviewServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificReviewServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/UserServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/UserServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/VideoDescriptionServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/VideoDescriptionServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/VideosServlet.java" afterPath="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/VideosServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/templates/add_game.ftl" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/add_game.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
     </list>
     <ignored path="GameProjectV3.1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,37 +61,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="NewsCommentDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/NewsCommentDaoImpl.java">
+      <file leaf-file-name="AdminServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AdminServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="19" column="168" selection-start-line="19" selection-start-column="168" selection-end-line="19" selection-end-column="168" />
-              <folding>
-                <marker date="1479825819588" expanded="true" signature="666:805" ph="INSERT INTO comment_news... " />
-                <marker date="1479825819588" expanded="true" signature="1431:1474" ph="SELECT * FRO... comment_news" />
-                <marker date="1479825819588" expanded="true" signature="2326:2375" ph="SELECT * FRO... comment_news" />
-                <marker date="1479825819588" expanded="true" signature="3613:3684" ph="SELECT * FRO... comment_news" />
-                <marker date="1479825819588" expanded="true" signature="4933:4970" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forum-theme.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/forum-theme.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="198">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="games-list.ftl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="games-list.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/games-list.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
+            <state relative-caret-position="396">
               <caret line="33" column="72" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddGameServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddGameServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/FileServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="23" column="89" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_game.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/add_game.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="18" column="82" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/Helper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -94,28 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/Token.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/models/Cookie.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/TokenService.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/TokenServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/models/Video.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/models/TopicMessages.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/GroupDao.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/GroupDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/GroupService.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/GroupServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/DataBaseColumns.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/models/User.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/templates/add_news.ftl" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/templates/add_review.ftl" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/templates/add_video.ftl" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/verifier/UserVerifier.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AjaxSearchServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/templates/add_game.ftl" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/NewsService.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/VideoService.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/VideoServiceImpl.java" />
@@ -126,14 +154,10 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/forum-list.ftl" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/review-list.ftl" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/user.ftl" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AdminServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/admin.ftl" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddGameServlet.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/models/Game.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/NewsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/GameService.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddReviewServlet.java" />
-        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/GamesServlet.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/NewsCommentDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/NewsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/ReviewCommentDaoImpl.java" />
@@ -145,6 +169,32 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/games-list.ftl" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/GameDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/GameServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/Helper.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddNewsServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddReviewServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddTopicServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddVideoServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AdminServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ForumPageServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ForumServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/GamesServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/MainServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/MessagesServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/NewsServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/RegistrationServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ReviewsServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificGameServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificNewsServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificReviewServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/UserServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/VideoDescriptionServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/VideosServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/templates/add_game.ftl" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/AddImage.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/FileServlet.java" />
+        <option value="$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddGameServlet.java" />
       </list>
     </option>
   </component>
@@ -302,24 +352,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameProjectV3.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameProjectV3.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kadyrov" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1154,12 +1186,12 @@
       <workItem from="1479718531264" duration="957000" />
       <workItem from="1479733068428" duration="7891000" />
       <workItem from="1479798901349" duration="1806000" />
-      <workItem from="1479820205929" duration="5034000" />
+      <workItem from="1479820205929" duration="14353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216617000" />
+    <option name="totallyTimeSpent" value="225936000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1183,13 +1215,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41336355" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29105324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29105324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20171674" sideWeight="0.42172524" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20171674" sideWeight="0.5782748" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20171674" sideWeight="0.4169329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20171674" sideWeight="0.5830671" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1252,7 +1284,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="942" />
+      <option name="time" value="951" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1261,249 +1293,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/verifier/UserVerifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="e#279#280#0" expanded="false" />
-            <element signature="e#325#326#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="181" column="22" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/add_video.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AjaxSearchServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/add_game.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="29" column="76" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddNewsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/NewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/VideoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/base_log.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/Video.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/news-list.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/forum-list.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/UserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/base.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AdminServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/user.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/review-list.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddGameServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/GameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ReviewsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddReviewServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/RegistrationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/models/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="967">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/admin.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/GroupDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1694">
-          <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
-          <folding>
-            <marker date="1479674941717" expanded="true" signature="626:675" ph="INSERT INTO groups... " />
-            <marker date="1479674941717" expanded="true" signature="1220:1253" ph="SELECT * FRO... groups" />
-            <marker date="1479674941717" expanded="true" signature="1934:1977" ph="SELECT * FRO... groups" />
-            <marker date="1479674941717" expanded="true" signature="2978:3009" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/GroupServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/NewsCommentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-953">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <marker date="1479466958027" expanded="true" signature="1569:1643" ph="SELECT COUNT... comment_news" />
-            <marker date="1479466958027" expanded="true" signature="2259:2363" ph="SELECT users... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/ReviewCommentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-953">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <marker date="1479469905524" expanded="true" signature="1627:1704" ph="SELECT COUNT... comment_reviews" />
-            <marker date="1479469905524" expanded="true" signature="2320:2433" ph="SELECT users... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/ReviewServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-935">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <marker date="1479396050884" expanded="true" signature="1317:1403" ph="SELECT games... games" />
-            <marker date="1479396050884" expanded="true" signature="2286:2375" ph="SELECT users... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/services/implementations/TokenServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-451">
@@ -1704,28 +1493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/forum-theme.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/NewsCommentDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="19" column="168" selection-start-line="19" selection-start-column="168" selection-end-line="19" selection-end-column="168" />
-          <folding>
-            <marker date="1479825819588" expanded="true" signature="666:805" ph="INSERT INTO comment_news... " />
-            <marker date="1479825819588" expanded="true" signature="1431:1474" ph="SELECT * FRO... comment_news" />
-            <marker date="1479825819588" expanded="true" signature="2326:2375" ph="SELECT * FRO... comment_news" />
-            <marker date="1479825819588" expanded="true" signature="3613:3684" ph="SELECT * FRO... comment_news" />
-            <marker date="1479825819588" expanded="true" signature="4933:4970" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/GameDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-396">
@@ -1753,19 +1520,293 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddNewsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddReviewServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddTopicServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddVideoServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AjaxSearchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ForumPageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ForumServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/GamesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        <state relative-caret-position="352">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/Logout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/MessagesServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/NewsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/RegistrationServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/ReviewsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificGameServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificNewsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/SpecificReviewServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/UserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/VideoDescriptionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/VideosServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/dao/implementations/NewsCommentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="168" selection-start-line="19" selection-start-column="168" selection-end-line="19" selection-end-column="168" />
+          <folding>
+            <marker date="1479825819588" expanded="true" signature="666:805" ph="INSERT INTO comment_news... " />
+            <marker date="1479825819588" expanded="true" signature="1431:1474" ph="SELECT * FRO... comment_news" />
+            <marker date="1479825819588" expanded="true" signature="2326:2375" ph="SELECT * FRO... comment_news" />
+            <marker date="1479825819588" expanded="true" signature="3613:3684" ph="SELECT * FRO... comment_news" />
+            <marker date="1479825819588" expanded="true" signature="4933:4970" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/add_game.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="82" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/forum-theme.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/base.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/games-list.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
+        <state relative-caret-position="396">
           <caret line="33" column="72" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AdminServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="188" column="29" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/utils/AddImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/FileServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="89" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/kpfu/itis/group/kadyrov/servlet/AddGameServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

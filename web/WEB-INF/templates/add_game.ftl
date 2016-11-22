@@ -9,22 +9,22 @@
 </div>
 
 <div class=" col-lg-6 col-md-offset-3">
-    <form role="form" action="/add_game" method="POST">
+    <form role="form" action="/add_game" enctype="multipart/form-data" method="POST">
         <div class="form-group col-sm-10 col-md-offset-1">
-            <label for="InputName">Название игры</label>
-            <input required type="text" class="form-control" id="InputName" name="name" placeholder="Введите название">
+            <label for="name">Название игры</label>
+            <input required type="text" class="form-control" id="name" name="name" placeholder="Введите название">
         </div>
         <div class="form-group col-sm-10 col-md-offset-1">
-            <label for="InputDate">Дата выхода</label>
-            <input type="text" class="form-control" id="pickyDate" name="date">
+            <label for="pickyDate">Дата выхода</label>
+            <input type="text" class="form-control" id="pickyDate" name="pickyDate">
         </div>
         <div class="form-group col-sm-10 col-md-offset-1">
-            <label for="InputText">Описание</label>
-            <textarea required class="form-control" id="InputText" name="text" placeholder="Введите текст"></textarea>
+            <label for="text">Описание</label>
+            <textarea required class="form-control" id="text" name="text" placeholder="Введите текст"></textarea>
         </div>
         <div class="form-group col-sm-10 col-md-offset-1">
-            <label for="InputLink">Ссылка на картинку</label>
-            <input required type="text" class="form-control" id="InputLink" name="link" placeholder="Введите путь">
+            <label for="image">Картинка</label>
+            <input type="file" id="image" name="image" accept="image/*,image/jpeg">
         </div>
         <div class="col-sm-offset-7 col-sm-5">
             <button type="submit" class="btn btn-default">Отправить</button>

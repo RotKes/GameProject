@@ -1,4 +1,4 @@
-package ru.kpfu.itis.group.kadyrov;
+package ru.kpfu.itis.group.kadyrov.utils;
 
 import freemarker.template.Template;
 import freemarker.template.TemplateException;

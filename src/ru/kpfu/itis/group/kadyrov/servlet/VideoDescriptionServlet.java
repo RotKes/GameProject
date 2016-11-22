@@ -1,6 +1,6 @@
 package ru.kpfu.itis.group.kadyrov.servlet;
 
-import ru.kpfu.itis.group.kadyrov.Helper;
+import ru.kpfu.itis.group.kadyrov.utils.Helper;
 import ru.kpfu.itis.group.kadyrov.models.CommentVideo;
 import ru.kpfu.itis.group.kadyrov.services.UserService;
 import ru.kpfu.itis.group.kadyrov.services.VideoCommentService;
