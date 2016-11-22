@@ -16,7 +16,7 @@ public class VideoDaoImpl implements VideoDao {
     @Override
     public void addVideo(Video video) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && video != null) {
-            String request = "INSERT INTO videos (\"game_id\",\"video_link\",\"title\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
+            String request = "INSERT INTO videos (\"game_id\",\"video_link\",\"title\",\"date\") VALUES (?,?,?,to_char(current_timestamp, 'DD.MM.YYYY, HH24:MI:SS'))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,video.getGame_id());

@@ -7,6 +7,7 @@
 <link href = "/css/bootstrap.css"
       rel = "stylesheet"
       type="text/css"/>
+<script src="/js/sorttable.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>Admin</title>

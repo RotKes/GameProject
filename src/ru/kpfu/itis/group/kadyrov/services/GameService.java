@@ -17,5 +17,5 @@ public interface GameService {
     List<Game> getSpecialGames(String q);
     LinkedList<Game> getAllGames();
     void deleteGame(int id);
-    void changeRatingOfGame(int game_id);
+    void changeRatingOfGames();
 }

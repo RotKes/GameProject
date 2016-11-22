@@ -16,7 +16,7 @@ public class NewsDaoImpl implements NewsDao {
     @Override
     public void addNews(News news) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && news != null) {
-            String request = "INSERT INTO news (\"game_id\",\"title\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
+            String request = "INSERT INTO news (\"game_id\",\"title\",\"text\",\"date\") VALUES (?,?,?,to_char(current_timestamp, 'DD.MM.YYYY, HH24:MI:SS'))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,news.getGame_id());

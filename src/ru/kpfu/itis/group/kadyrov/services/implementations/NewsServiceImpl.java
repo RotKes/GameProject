@@ -59,7 +59,7 @@ public class NewsServiceImpl implements NewsService {
                         news = null;
                         e.printStackTrace();
                     }
-                    linkedList.addFirst(news);
+                    linkedList.add(news);
                 }
                 return linkedList;
             } catch (SQLException sql) {

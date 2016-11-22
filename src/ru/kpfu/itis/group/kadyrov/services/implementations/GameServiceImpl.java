@@ -70,13 +70,12 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public void changeRatingOfGame(int game_id) {
+    public void changeRatingOfGames() {
         if (ConnectionSingleton.getInstance().getConnection()!= null) {
-            String request = "UPDATE games SET rate = (SELECT AVG(rate) FROM reviews WHERE reviews.game_id = ?) WHERE games.id = ?";
+            String request = "UPDATE \"games\" SET \"rate\" = (SELECT AVG(\"rate\") FROM \"reviews\" WHERE reviews.game_id = games.id)";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
-                statement.setInt(1,game_id);
-                statement.setInt(2,game_id);
+                statement.executeUpdate();
             } catch (SQLException sql) {
                 sql.printStackTrace();
             }

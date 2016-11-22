@@ -16,7 +16,7 @@ public class ReviewDaoImpl implements ReviewDao {
     @Override
     public void addReview(Review review) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && review != null) {
-            String request = "INSERT INTO reviews (\"game_id\",\"creator_id\",\"title\",\"text\",\"rate\",\"date\") VALUES (?,?,?,?,?,DATE_TRUNC('second', NOW()))";
+            String request = "INSERT INTO reviews (\"game_id\",\"creator_id\",\"title\",\"text\",\"rate\",\"date\") VALUES (?,?,?,?,?,to_char(current_timestamp, 'DD.MM.YYYY, HH24:MI:SS'))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,review.getGame_id());

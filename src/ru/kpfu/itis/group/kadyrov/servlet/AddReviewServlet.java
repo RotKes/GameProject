@@ -41,6 +41,7 @@ public class AddReviewServlet extends HttpServlet {
         ReviewService reviewService = new ReviewServiceImpl();
         try {
             reviewService.addReview(new Review(user_id,gameService.findGame(game).getId(),title,text,rating));
+            gameService.changeRatingOfGames();
             response.sendRedirect("/reviews");
             return;
         } catch (SQLException e) {

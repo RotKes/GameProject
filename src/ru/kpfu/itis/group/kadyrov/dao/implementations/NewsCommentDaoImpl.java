@@ -17,7 +17,7 @@ public class NewsCommentDaoImpl implements NewsCommentDao {
     @Override
     public void addNewsComment(CommentNews comment) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && comment != null) {
-            String request = "INSERT INTO comment_news (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
+            String request = "INSERT INTO comment_news (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,to_char(current_timestamp, 'DD.MM.YYYY, HH24:MI:SS'))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,comment.getPost_id());

@@ -39,6 +39,7 @@ public class GamesServlet extends HttpServlet {
         root.put("current_user", request.getSession().getAttribute("current_user"));
 
         GameService gameService = new GameServiceImpl();
+        gameService.changeRatingOfGames();
         LinkedList<Game> games = gameService.getAllGames();
         root.put("all_games", games);
 

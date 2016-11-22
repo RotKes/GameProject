@@ -9,9 +9,9 @@ public class Game {
     private String date;
     private String description;
     private String imageURL;
-    private int rating;
+    private float rating;
 
-    public Game(int id, String name, String date, String description, String imageURL, int rating) {
+    public Game(int id, String name, String date, String description, String imageURL, float rating) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -67,7 +67,7 @@ public class Game {
         this.imageURL = imageURL;
     }
 
-    public int getRating() {
+    public float getRating() {
         return rating;
     }
 

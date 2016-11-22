@@ -16,7 +16,7 @@ public class TopicMessageDaoImpl implements TopicMessageDao {
     @Override
     public void addTopicMessage(TopicMessages topicMessage) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && topicMessage != null) {
-            String request = "INSERT INTO messages (\"topic_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
+            String request = "INSERT INTO messages (\"topic_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,to_char(current_timestamp, 'DD.MM.YYYY, HH24:MI:SS'))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,topicMessage.getTopic_id());

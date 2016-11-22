@@ -16,7 +16,7 @@ public class VideoCommentDaoImpl implements VideoCommentDao {
     @Override
     public void addVideoComment(CommentVideo comment) throws SQLException {
         if (ConnectionSingleton.getInstance().getConnection() != null && comment != null) {
-            String request = "INSERT INTO comment_videos (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,DATE_TRUNC('second', NOW()))";
+            String request = "INSERT INTO comment_videos (\"post_id\",\"creator_id\",\"text\",\"date\") VALUES (?,?,?,to_char(current_timestamp, 'DD.MM.YYYY, HH24:MI:SS'))";
             try {
                 PreparedStatement statement = ConnectionSingleton.getConnection().prepareStatement(request);
                 statement.setInt(1,comment.getPost_id());
