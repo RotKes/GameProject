@@ -49,7 +49,7 @@ public class GameServiceImpl implements GameService {
                             rs.getString("date"),
                             rs.getString("description"),
                             rs.getString("image"),
-                            rs.getInt("rate")));
+                            rs.getFloat("rate")));
                 }
             } catch (SQLException sql) {
                 sql.printStackTrace();

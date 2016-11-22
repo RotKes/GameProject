@@ -44,7 +44,7 @@ public class GameDaoImpl implements GameDao {
                             rs.getString("date"),
                             rs.getString("description"),
                             rs.getString("image"),
-                            rs.getInt("rate"));
+                            rs.getFloat("rate"));
                 }
             } catch (SQLException sql) {
                 sql.printStackTrace();
@@ -67,7 +67,7 @@ public class GameDaoImpl implements GameDao {
                             rs.getString("date"),
                             rs.getString("description"),
                             rs.getString("image"),
-                            rs.getInt("rate"));
+                            rs.getFloat("rate"));
                 }
             } catch (SQLException sql) {
                 sql.printStackTrace();
@@ -92,7 +92,7 @@ public class GameDaoImpl implements GameDao {
                                 rs.getString("date"),
                                 rs.getString("description"),
                                 rs.getString("image"),
-                                rs.getInt("rate"));
+                                rs.getFloat("rate"));
                     } catch (Exception e) {
                         game = null;
                         e.printStackTrace();
